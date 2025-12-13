@@ -12,7 +12,3 @@ Rails.application.config.assets.version = "1.0"
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 # Silence Sass deprecation warnings from dependencies (like Bulma)
-Rails.application.config.dartsass.builds = {
-  "application.css" => "application.bulma.scss"
-}
-Rails.application.config.dartsass.build_options << "--quiet-deps"
