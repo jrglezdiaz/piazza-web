@@ -10,3 +10,9 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# Silence Sass deprecation warnings from dependencies (like Bulma)
+Rails.application.config.dartsass.builds = {
+  "application.css" => "application.bulma.scss"
+}
+Rails.application.config.dartsass.build_options << "--quiet-deps"
